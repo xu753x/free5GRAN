@@ -301,6 +301,10 @@ void scan_bands(vector<free5GRAN::band> BANDS,
                                           chosen_device, &rf_buff);
   }
 #endif
+	else if (chosen_device.type == "soapy") {
+	  rf_device = new free5GRAN::usrp_b200(bandwidth, freq, gain, bandwidth,
+										   chosen_device, &rf_buff);
+	}
   else {
     cout << "Unsupported RF device" << endl;
     return;
