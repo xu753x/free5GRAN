@@ -366,6 +366,7 @@ void scan_bands(vector<free5GRAN::band> BANDS,
       } else {
         band_info = free5GRAN::BANDWIDTH_30_KHZ;
       }
+	  band_info = free5GRAN::BANDWIDTH_30_KHZ;
       BOOST_LOG_TRIVIAL(trace) << "Bandwidth informations are: ";
       BOOST_LOG_TRIVIAL(trace) << "SCS: " + to_string(band_info.scs);
 
@@ -492,6 +493,7 @@ void search_cell_with_defined_params(double frequency,
   } else {
     band_info = free5GRAN::BANDWIDTH_30_KHZ;
   }
+  band_info = free5GRAN::BANDWIDTH_30_KHZ;
   BOOST_LOG_TRIVIAL(trace) << "Bandwidth informations are: ";
   BOOST_LOG_TRIVIAL(trace) << "SCS: " + to_string(band_info.scs);
   /*
@@ -556,6 +558,10 @@ void search_cell_with_defined_params(double frequency,
                                           chosen_device, &rf_buff);
   }
 #endif
+  else if (chosen_device.type == "soapy") {
+    rf_device = new free5GRAN::usrp_n3xx(bandwidth, frequency, gain, bandwidth,
+                                         chosen_device, &rf_buff);
+  }
   else {
     cout << "Unsupported RF device" << endl;
     return;
