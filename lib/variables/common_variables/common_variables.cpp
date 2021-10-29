@@ -164,12 +164,13 @@ int free5GRAN::DMRS_BASE_X1_SEQUENCE[] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                           0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-int free5GRAN::NUM_SUPPORTED_BANDS = 7;
+int free5GRAN::NUM_SUPPORTED_BANDS = 8;
 
 free5GRAN::band free5GRAN::AVAILABLE_BANDS[] = {
     free5GRAN::BAND_N_1, free5GRAN::BAND_N_2, free5GRAN::BAND_N_3,
     free5GRAN::BAND_N_7, free5GRAN::BAND_N_8, free5GRAN::BAND_N_78,
-    free5GRAN::BAND_N_28};
+    free5GRAN::BAND_N_28,
+	free5GRAN::BAND_N_41};
 
 int free5GRAN::TS_38_213_TABLE_13_1[16][4] = {
     {1, 24, 2, 0},  {1, 24, 2, 2},  {1, 24, 2, 4},  {1, 24, 3, 0},

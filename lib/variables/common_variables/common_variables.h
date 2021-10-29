@@ -138,7 +138,7 @@ extern int NUM_SUPPORTED_BANDS;
 /*
  * Array to store available bands
  */
-extern free5GRAN::band AVAILABLE_BANDS[7];
+extern free5GRAN::band AVAILABLE_BANDS[8];
 
 /*
  * TS 38.213 Table 13-1

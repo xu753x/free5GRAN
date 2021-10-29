@@ -167,6 +167,7 @@ using bwp = struct bwp_ {
 /*
  * 5G NR bands
  */
+extern band BAND_N_41;
 extern band BAND_N_78;
 extern band BAND_N_7;
 extern band BAND_N_8;
