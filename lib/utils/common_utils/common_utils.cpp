@@ -151,7 +151,7 @@ void free5GRAN::utils::common_utils::select_rf_device(
     }
   } else {
     for (const auto& usrp_device : usrp_devices) {
-      if (usrp_device.type == "x300" || usrp_device.type == "b200" ||
+      if (usrp_device.type == "x300" || usrp_device.type == "b200" ||usrp_device.type == "soapy" ||
           usrp_device.type == "usrp2") {
         rf_device_obj = usrp_device;
         break;

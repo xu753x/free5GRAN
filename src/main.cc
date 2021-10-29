@@ -667,7 +667,7 @@ void init_logging(const string& level) {
       boost::log::trivial::severity_level, char>("Severity");
 
   boost::log::add_file_log(
-      boost::log::keywords::file_name = "/var/log/free5GRAN/free5GRAN.log",
+      boost::log::keywords::file_name = "free5GRAN.log",
       boost::log::keywords::format =
           "[%TimeStamp%] [%ThreadID%] [%Severity%] %Message%");
 
