@@ -559,7 +559,7 @@ void search_cell_with_defined_params(double frequency,
   }
 #endif
   else if (chosen_device.type == "soapy") {
-    rf_device = new free5GRAN::usrp_n3xx(bandwidth, frequency, gain, bandwidth,
+    rf_device = new free5GRAN::usrp_b200(bandwidth, frequency, gain, bandwidth,
                                          chosen_device, &rf_buff);
   }
   else {
@@ -672,6 +672,8 @@ void init_logging(const string& level) {
           "[%TimeStamp%] [%ThreadID%] [%Severity%] %Message%");
 
   if (level == "trace") {
+  
+  
     boost::log::core::get()->set_filter(boost::log::trivial::severity >=
                                         boost::log::trivial::trace);
   } else if (level == "debug") {

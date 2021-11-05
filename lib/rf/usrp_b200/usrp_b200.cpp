@@ -52,6 +52,7 @@ free5GRAN::usrp_b200::usrp_b200(double sample_rate,
   string subdev;
   subdev = (chosen_device.subdev.empty()) ? "A:A" : chosen_device.subdev;
   string ant("TX/RX");
+  //string ant("LNAH"); //for lmssdr
   string ref;
   ref = (chosen_device.ref.empty()) ? "internal" : chosen_device.ref;
   this->rf_buff = rf_buff;
