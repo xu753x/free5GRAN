@@ -39,6 +39,10 @@ sudo apt-get install libuhd-dev
 
 USRP N210 is partially supported (it can be unstable) and `free5GRAN` requires Liquid SDR library for sampling rate resampling : `https://liquidsdr.org/doc/installation/`. To build `free5GRAN` with USRP N210 support, just run the `cmake` command with option `-DINCLUDE_N210=ON`.
 
+PlutoSDR support requires SopaySDR, SoapyUHD and SoapyPlutoSdr.
+LimeSDR support requires SopaySDR, SoapyUHD and Limesuit.
+
+
 ### Compiling
 
 free5GRAN executable can be compiled from sources with the following commands:
