@@ -773,7 +773,7 @@ void free5GRAN::phy::transport_channel::rate_recover_ldpc(
    */
   j = 0;
   k = 0;
-  while (k < E) {
+  while(k < E && j<N_cb){
     index = (k0 + j) % N_cb;
     if (find(seen_indexes.begin(), seen_indexes.end(), index) ==
         seen_indexes.end()) {
