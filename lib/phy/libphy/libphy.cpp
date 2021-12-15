@@ -795,7 +795,7 @@ auto free5GRAN::phy::signal_processing::synchronize_and_extract_pbch(
   BOOST_LOG_TRIVIAL(trace) << "Extracting PBCH";
   // Get at least 30ms of signal (=3 frames, at least 2 complete ones)
   size_t num_samples = buffer.size();
-
+  /*
   ofstream data;
   data.open("data.txt");
   for (int i = 0; i < num_samples; i++) {
@@ -803,7 +803,7 @@ auto free5GRAN::phy::signal_processing::synchronize_and_extract_pbch(
     data << "\n";
   }
   data.close();
-
+  */
   auto now = chrono::high_resolution_clock::now();
 
   /*
@@ -1332,6 +1332,7 @@ void free5GRAN::phy::signal_processing::blind_search_pdcch(
           /*
            * Channel equalization
            */
+          /* 
           ofstream data_pdcch;
           data_pdcch.open("pdcch_constellation.txt");
           for (int sc = 0; sc < agg_level * free5GRAN::NUMBER_REG_PER_CCE * 9;
@@ -1347,6 +1348,7 @@ void free5GRAN::phy::signal_processing::blind_search_pdcch(
             data_pdcch << "\n";
           }
           data_pdcch.close();
+          */
           /*
           ofstream data;
           data.open("frame_buff_data.txt");
@@ -1370,6 +1372,7 @@ void free5GRAN::phy::signal_processing::blind_search_pdcch(
            * If DCI CRC is validated, candidate is validated, blind search ends
            */
           if (validated) {
+		  	/*
             data_pdcch.open("output_files/pdcch_constellation.txt");
             for (int sc = 0; sc < agg_level * free5GRAN::NUMBER_REG_PER_CCE * 9;
                  sc++) {
@@ -1377,6 +1380,7 @@ void free5GRAN::phy::signal_processing::blind_search_pdcch(
               data_pdcch << "\n";
             }
             data_pdcch.close();
+            */
             goto dci_found_and_validated;
           }
         }
@@ -1634,7 +1638,7 @@ void free5GRAN::phy::signal_processing::extract_pdsch(
                                      [channel_indexes[0][1][sc]]),
                      2);
     }
-
+    /*
     ofstream data_pdsch;
     data_pdsch.open("output_files/pdsch_constellation.txt");
     for (int i = 0; i < 12 * lrb * (L - num_symbols_dmrs); i++) {
@@ -1642,7 +1646,7 @@ void free5GRAN::phy::signal_processing::extract_pdsch(
       data_pdsch << "\n";
     }
     data_pdsch.close();
-
+    */
     /*
      * PDSCH and DL-SCH decoding
      */

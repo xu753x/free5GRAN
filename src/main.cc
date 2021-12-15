@@ -543,7 +543,7 @@ void search_cell_with_defined_params(double frequency,
   /*
    * Create RF device depending on RF type.
    */
-  double bandwidth = 30.72e6;
+  double bandwidth = 23.04e6;
   free5GRAN::rf* rf_device;
   if (chosen_device.type == "b200") {
     rf_device = new free5GRAN::usrp_b200(bandwidth, frequency, gain, bandwidth,

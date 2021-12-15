@@ -46,13 +46,14 @@ free5GRAN::usrp_b200::usrp_b200(double sample_rate,
    */
 
   string device_args("serial=" + chosen_device.serial);
-  device_args +=
-      ", master_clock_rate=30.72e6, recv_frame_size=7976, "
-      "send_frame_size=7976, num_recv_frames=256, num_send_frames=256";
+  //device_args +=
+  //    ", master_clock_rate=30.72e6, recv_frame_size=7976, "
+  //    "send_frame_size=7976, num_recv_frames=256, num_send_frames=256";
+  device_args +="auto";
   string subdev;
   subdev = (chosen_device.subdev.empty()) ? "A:A" : chosen_device.subdev;
-  string ant("TX/RX");
-  //string ant("LNAH"); //for lmssdr
+  //string ant("TX/RX");
+  string ant("LNAH"); //for lmssdr
   string ref;
   ref = (chosen_device.ref.empty()) ? "internal" : chosen_device.ref;
   this->rf_buff = rf_buff;
