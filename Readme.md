@@ -32,7 +32,7 @@ sudo apt-get install cmake libfftw3-dev libconfig++-dev libboost-program-options
 
 ### Radio frontend
 
-We currently support USRP B210, N210 and X310 natively. `libuhd-dev` is required. It can be installed on Ubuntu via:
+Currently support USRP B210, N210 , X310 and other SDR board with SOAPY natively . `libuhd-dev` is required. It can be installed on Ubuntu via:
 ```
 sudo apt-get install libuhd-dev
 ```
@@ -42,6 +42,9 @@ USRP N210 is partially supported (it can be unstable) and `free5GRAN` requires L
 PlutoSDR support requires SopaySDR, SoapyUHD and SoapyPlutoSdr.
 LimeSDR support requires SopaySDR, SoapyUHD and Limesuit.
 
+On Pi4 with ubuntu20.04 if UHD can't find SDR devices, Pls
+export UHD_MODULE_PATH=/usr/lib/uhd/modules
+export PATH=$PATH:/usr/local/lib/SoapySDR/modules0.8
 
 ### Compiling
 
@@ -92,6 +95,8 @@ free5GRAN writes logs in `/var/log/free5GRAN/free5GRAN.log`. It can be used for 
 ## Testing note 
 
 free5GRAN has been successfully tested on Ubuntu 18.04 with USRP B210. It is currently under active development, which means that it might not be fully stable. 
+
+free5GRAN_SoapySDR has been successfully tested on Ubuntu 20.04 with X86 and Pi4 platform. LMSDR with USB3 or PCIE can decode sib1. PlutoSDR MIB is ok.
 
 ## Issues
 
